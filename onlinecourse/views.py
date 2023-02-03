@@ -169,12 +169,12 @@ def show_exam_result(request, course_id, submission_id):\
 
     # Add the course, selected_ids, and grade to context for rendering HTML page
     context = {
-        'course' = course,
-        'selected_choice_ids' = selected_choice_ids,
-        'grade' = grade,
-        'total_pts' = total_pts,
-        'score' = round((grade/ total_pts) * 100),
+        'course': course,
+        'selected_choice_ids': selected_choice_ids,
+        'grade': grade,
+        'total_pts': total_pts,
+        'score': round((grade/ total_pts) * 100)
     }
 
-    return render(request, 'onlinecourse/exam_result/bootstrap.html', context)
+    return render(request, 'onlinecourse/exam_result_bootstrap.html', context)
 
